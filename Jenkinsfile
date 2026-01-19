@@ -26,7 +26,7 @@ pipeline{
 		}
 		stage("Arhieve"){
 			steps{
-				archieveArtifavts artifacts:"build/calculator*", fingerprint:true
+				archieveArtifacts artifacts:"build/calculator*", fingerprint:true
 			}
 		}
 		stage("deploy"){

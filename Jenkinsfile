@@ -24,9 +24,9 @@ pipeline{
                                 echo "linting"
                         }
 		}
-		stage("Arhieve"){
+		stage("Archive"){
 			steps{
-				archieveArtifacts artifacts:"build/calculator*", fingerprint:true
+				archiveArtifacts artifacts:"build/calculator*", fingerprint:true
 			}
 		}
 		stage("deploy"){

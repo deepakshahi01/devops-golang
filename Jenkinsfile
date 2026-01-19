@@ -1,7 +1,7 @@
 pipeline{
 	agent any
 	tools{
-		go 'go-1.23.10'
+		go 'go1.23.10'
 	}
 	stages{
 		stage("build"){
@@ -26,7 +26,7 @@ pipeline{
 		}
 		stage("Arhieve"){
 			steps{
-				archieveArtifavts artifacts:"build/calculator", fingerprint:true
+				archieveArtifavts artifacts:"build/calculator*", fingerprint:true
 			}
 		}
 		stage("deploy"){

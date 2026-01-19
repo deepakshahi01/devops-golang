@@ -8,7 +8,7 @@ pipeline{
 			steps{
 				sh '''
 				mkdir -p build
-				go bilid -o build/calculator
+				go build -o build/calculator
 				'''
 				echo "biuilding"
 			}

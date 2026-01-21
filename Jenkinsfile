@@ -35,7 +35,7 @@ pipeline{
 				sudo mkdir /opt/goapp
 				sudo cp build/calculator /opt/goapp
 				sudo chmod +x /opt/goapp/calculator
-				cd /opt/goaap
+				cd /opt/goapp
 				sudo ./calculator &
 				'''
 				echo "deploying"

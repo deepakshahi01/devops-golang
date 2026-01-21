@@ -32,9 +32,10 @@ pipeline{
 		stage("deploy"){
 			steps{
 				sh '''
-				mkdir /opt/goapp
+				sudo mkdir /opt/goapp
 				sudo cp build/calculator /opt/goapp
 				sudo chmod +x /opt/goapp/calculator
+				cd /opt/goaap
 				sudo ./calculator &
 				'''
 				echo "deploying"

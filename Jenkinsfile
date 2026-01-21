@@ -32,7 +32,6 @@ pipeline{
 		stage("deploy"){
 			steps{
 				sh '''
-				sudo mkdir /opt/goapp
 				sudo cp build/calculator /opt/goapp
 				sudo chmod +x /opt/goapp/calculator
 				cd /opt/goapp

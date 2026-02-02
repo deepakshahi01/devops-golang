@@ -19,6 +19,9 @@ jobs:
         run: go mod download
       - name: Verify dependencies
         run: go mod verify
+      - name: Check formatting
+        run: |
+          test -z "$(go fmt ./...)"
       - name: run tests
         run: go test ./...
       - name: build binary
@@ -32,6 +35,7 @@ jobs:
           path: myapp
           retention-days: 1
           
+
 
 
 

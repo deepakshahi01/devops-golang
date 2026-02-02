@@ -17,7 +17,9 @@ jobs:
       - name: run tests
         run: go test ./...
       - name: build binary
-        run: go build -o myapp ./cmd/myapp
+        run: |
+            mkdir myapp
+            go build -o myapp ./cmd/myapp
       - name: upload artifact
         uses: actions/upload-artifact@v4
         with:
@@ -25,4 +27,5 @@ jobs:
           path: myapp
           retention-days: 1
           
+
 
